@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.emilocker.dpc.app-merged_res-35:/layout_activity_lock.xml.flat",
+        "source": "com.emilocker.dpc.app-main-37:/layout/activity_lock.xml"
+    },
+    {
+        "merged": "com.emilocker.dpc.app-merged_res-35:/xml_device_admin_policies.xml.flat",
+        "source": "com.emilocker.dpc.app-main-37:/xml/device_admin_policies.xml"
+    }
+]

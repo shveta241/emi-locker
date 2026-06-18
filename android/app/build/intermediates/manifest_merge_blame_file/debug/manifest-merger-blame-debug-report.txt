@@ -1,0 +1,381 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.emilocker.dpc"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:4:5-67
+11-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+12-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:5:5-81
+12-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:5:22-78
+13    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+13-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:6:5-77
+13-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:6:22-74
+14    <uses-permission android:name="android.permission.CALL_PHONE" />
+14-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:7:5-69
+14-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:7:22-66
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:22:5-79
+15-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:22:22-76
+16    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+16-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:24:5-68
+16-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:24:22-65
+17    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+17-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:26:5-82
+17-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:26:22-79
+18
+19    <permission
+19-->[androidx.core:core:1.12.0] C:\Users\LENOVO\.gradle\caches\transforms-3\01be542a8a7642ecba403b94caa2bdf6\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+20        android:name="com.emilocker.dpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+20-->[androidx.core:core:1.12.0] C:\Users\LENOVO\.gradle\caches\transforms-3\01be542a8a7642ecba403b94caa2bdf6\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+21        android:protectionLevel="signature" />
+21-->[androidx.core:core:1.12.0] C:\Users\LENOVO\.gradle\caches\transforms-3\01be542a8a7642ecba403b94caa2bdf6\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+22
+23    <uses-permission android:name="com.emilocker.dpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+23-->[androidx.core:core:1.12.0] C:\Users\LENOVO\.gradle\caches\transforms-3\01be542a8a7642ecba403b94caa2bdf6\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+23-->[androidx.core:core:1.12.0] C:\Users\LENOVO\.gradle\caches\transforms-3\01be542a8a7642ecba403b94caa2bdf6\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+24
+25    <application
+25-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:9:5-66:19
+26        android:allowBackup="false"
+26-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:10:9-36
+27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+27-->[androidx.core:core:1.12.0] C:\Users\LENOVO\.gradle\caches\transforms-3\01be542a8a7642ecba403b94caa2bdf6\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+28        android:debuggable="true"
+29        android:extractNativeLibs="false"
+30        android:label="@string/app_name"
+30-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:11:9-41
+31        android:supportsRtl="true"
+31-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:12:9-35
+32        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+32-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:13:9-65
+33
+34        <!-- Kiosk Lock Screen Activity -->
+35        <activity
+35-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:16:9-28:20
+36            android:name="com.emilocker.dpc.ui.LockActivity"
+36-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:17:13-44
+37            android:excludeFromRecents="true"
+37-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:22:13-46
+38            android:exported="true"
+38-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:18:13-36
+39            android:launchMode="singleTask"
+39-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:19:13-44
+40            android:screenOrientation="portrait"
+40-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:23:13-49
+41            android:showOnLockScreen="true"
+41-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:21:13-44
+42            android:stateNotNeeded="true" >
+42-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:20:13-42
+43            <intent-filter>
+43-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:24:13-27:29
+44                <action android:name="android.intent.action.MAIN" />
+44-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:25:17-69
+44-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:25:25-66
+45
+46                <category android:name="android.intent.category.DEFAULT" />
+46-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:26:17-76
+46-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:26:27-73
+47            </intent-filter>
+48        </activity>
+49
+50        <!-- Device Admin Receiver -->
+51        <receiver
+51-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:31:9-45:20
+52            android:name="com.emilocker.dpc.receiver.DeviceAdminReceiver"
+52-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:32:13-57
+53            android:description="@string/device_admin_description"
+53-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:33:13-67
+54            android:exported="true"
+54-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:36:13-36
+55            android:label="@string/app_name"
+55-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:34:13-45
+56            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+56-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:35:13-70
+57            <meta-data
+57-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:37:13-39:65
+58                android:name="android.app.device_admin"
+58-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:38:17-56
+59                android:resource="@xml/device_admin_policies" />
+59-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:39:17-62
+60
+61            <intent-filter>
+61-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:40:13-44:29
+62                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+62-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:41:17-82
+62-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:41:25-79
+63                <action android:name="android.app.action.PROFILE_PROVISIONING_COMPLETE" />
+63-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:42:17-91
+63-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:42:25-88
+64                <action android:name="android.intent.action.BOOT_COMPLETED" />
+64-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:43:17-79
+64-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:43:25-76
+65            </intent-filter>
+66        </receiver>
+67
+68        <!-- Offline Sync & Watchdog Receiver -->
+69        <receiver
+69-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:48:9-55:20
+70            android:name="com.emilocker.dpc.receiver.OfflineSyncReceiver"
+70-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:49:13-57
+71            android:exported="true" >
+71-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:50:13-36
+72            <intent-filter>
+72-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:51:13-54:29
+73                <action android:name="android.intent.action.BOOT_COMPLETED" />
+73-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:43:17-79
+73-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:43:25-76
+74                <action android:name="android.intent.action.TIME_TICK" />
+74-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:53:17-74
+74-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:53:25-71
+75            </intent-filter>
+76        </receiver>
+77
+78        <!-- Firebase Push Receiver Service -->
+79        <service
+79-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:58:9-64:19
+80            android:name="com.emilocker.dpc.service.FcmService"
+80-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:59:13-47
+81            android:exported="false" >
+81-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:60:13-37
+82            <intent-filter>
+82-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:61:13-63:29
+83                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+83-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:62:17-78
+83-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:62:25-75
+84            </intent-filter>
+85        </service>
+86
+87        <provider
+87-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LENOVO\.gradle\caches\transforms-3\3b1c9546348c78fb93ea44cdc358ca9a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+88            android:name="androidx.startup.InitializationProvider"
+88-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LENOVO\.gradle\caches\transforms-3\3b1c9546348c78fb93ea44cdc358ca9a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+89            android:authorities="com.emilocker.dpc.androidx-startup"
+89-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LENOVO\.gradle\caches\transforms-3\3b1c9546348c78fb93ea44cdc358ca9a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+90            android:exported="false" >
+90-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LENOVO\.gradle\caches\transforms-3\3b1c9546348c78fb93ea44cdc358ca9a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
+91            <meta-data
+91-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LENOVO\.gradle\caches\transforms-3\3b1c9546348c78fb93ea44cdc358ca9a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+92                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+92-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LENOVO\.gradle\caches\transforms-3\3b1c9546348c78fb93ea44cdc358ca9a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
+93                android:value="androidx.startup" />
+93-->[androidx.emoji2:emoji2:1.2.0] C:\Users\LENOVO\.gradle\caches\transforms-3\3b1c9546348c78fb93ea44cdc358ca9a\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+94            <meta-data
+94-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\LENOVO\.gradle\caches\transforms-3\3604298f7ed8b9765ba613ece91af762\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:29:13-31:52
+95                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+95-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\LENOVO\.gradle\caches\transforms-3\3604298f7ed8b9765ba613ece91af762\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:30:17-78
+96                android:value="androidx.startup" />
+96-->[androidx.lifecycle:lifecycle-process:2.6.1] C:\Users\LENOVO\.gradle\caches\transforms-3\3604298f7ed8b9765ba613ece91af762\transformed\jetified-lifecycle-process-2.6.1\AndroidManifest.xml:31:17-49
+97            <meta-data
+97-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+98                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+98-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+99                android:value="androidx.startup" />
+99-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+100        </provider>
+101
+102        <service
+102-->[com.google.firebase:firebase-messaging-ktx:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\7a42d442a03d094934ddca6aa7634ff4\transformed\jetified-firebase-messaging-ktx-23.4.1\AndroidManifest.xml:23:9-29:19
+103            android:name="com.google.firebase.components.ComponentDiscoveryService"
+103-->[com.google.firebase:firebase-messaging-ktx:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\7a42d442a03d094934ddca6aa7634ff4\transformed\jetified-firebase-messaging-ktx-23.4.1\AndroidManifest.xml:24:13-84
+104            android:directBootAware="true"
+104-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO\.gradle\caches\transforms-3\0ac28fce5f7b60b3c54e9f3d424d84ee\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:32:13-43
+105            android:exported="false" >
+105-->[com.google.firebase:firebase-messaging-ktx:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\7a42d442a03d094934ddca6aa7634ff4\transformed\jetified-firebase-messaging-ktx-23.4.1\AndroidManifest.xml:25:13-37
+106            <meta-data
+106-->[com.google.firebase:firebase-messaging-ktx:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\7a42d442a03d094934ddca6aa7634ff4\transformed\jetified-firebase-messaging-ktx-23.4.1\AndroidManifest.xml:26:13-28:85
+107                android:name="com.google.firebase.components:com.google.firebase.messaging.ktx.FirebaseMessagingLegacyRegistrar"
+107-->[com.google.firebase:firebase-messaging-ktx:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\7a42d442a03d094934ddca6aa7634ff4\transformed\jetified-firebase-messaging-ktx-23.4.1\AndroidManifest.xml:27:17-129
+108                android:value="com.google.firebase.components.ComponentRegistrar" />
+108-->[com.google.firebase:firebase-messaging-ktx:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\7a42d442a03d094934ddca6aa7634ff4\transformed\jetified-firebase-messaging-ktx-23.4.1\AndroidManifest.xml:28:17-82
+109            <meta-data
+109-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:57:13-59:85
+110                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingKtxRegistrar"
+110-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:58:17-122
+111                android:value="com.google.firebase.components.ComponentRegistrar" />
+111-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:59:17-82
+112            <meta-data
+112-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:60:13-62:85
+113                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+113-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:61:17-119
+114                android:value="com.google.firebase.components.ComponentRegistrar" />
+114-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:62:17-82
+115            <meta-data
+115-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\LENOVO\.gradle\caches\transforms-3\65106b831290177b7d04fa613074a073\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:15:13-17:85
+116                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsKtxRegistrar"
+116-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\LENOVO\.gradle\caches\transforms-3\65106b831290177b7d04fa613074a073\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:16:17-130
+117                android:value="com.google.firebase.components.ComponentRegistrar" />
+117-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\LENOVO\.gradle\caches\transforms-3\65106b831290177b7d04fa613074a073\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:17:17-82
+118            <meta-data
+118-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\LENOVO\.gradle\caches\transforms-3\65106b831290177b7d04fa613074a073\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:18:13-20:85
+119                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+119-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\LENOVO\.gradle\caches\transforms-3\65106b831290177b7d04fa613074a073\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:19:17-127
+120                android:value="com.google.firebase.components.ComponentRegistrar" />
+120-->[com.google.firebase:firebase-installations:17.2.0] C:\Users\LENOVO\.gradle\caches\transforms-3\65106b831290177b7d04fa613074a073\transformed\jetified-firebase-installations-17.2.0\AndroidManifest.xml:20:17-82
+121            <meta-data
+121-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\LENOVO\.gradle\caches\transforms-3\e0afa161fc803b6b753d16914466adf5\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:12:13-14:85
+122                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+122-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\LENOVO\.gradle\caches\transforms-3\e0afa161fc803b6b753d16914466adf5\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:13:17-116
+123                android:value="com.google.firebase.components.ComponentRegistrar" />
+123-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\LENOVO\.gradle\caches\transforms-3\e0afa161fc803b6b753d16914466adf5\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:14:17-82
+124            <meta-data
+124-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO\.gradle\caches\transforms-3\0ac28fce5f7b60b3c54e9f3d424d84ee\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:35:13-37:85
+125                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+125-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO\.gradle\caches\transforms-3\0ac28fce5f7b60b3c54e9f3d424d84ee\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:36:17-109
+126                android:value="com.google.firebase.components.ComponentRegistrar" />
+126-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO\.gradle\caches\transforms-3\0ac28fce5f7b60b3c54e9f3d424d84ee\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:37:17-82
+127            <meta-data
+127-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\LENOVO\.gradle\caches\transforms-3\c3bcf46e239e7e60a692a1dca184da41\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
+128                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+128-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\LENOVO\.gradle\caches\transforms-3\c3bcf46e239e7e60a692a1dca184da41\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
+129                android:value="com.google.firebase.components.ComponentRegistrar" />
+129-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\LENOVO\.gradle\caches\transforms-3\c3bcf46e239e7e60a692a1dca184da41\transformed\jetified-firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
+130        </service>
+131
+132        <receiver
+132-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:29:9-40:20
+133            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+133-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:30:13-78
+134            android:exported="true"
+134-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:31:13-36
+135            android:permission="com.google.android.c2dm.permission.SEND" >
+135-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:32:13-73
+136            <intent-filter>
+136-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:33:13-35:29
+137                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+137-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:34:17-81
+137-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:34:25-78
+138            </intent-filter>
+139
+140            <meta-data
+140-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:37:13-39:40
+141                android:name="com.google.android.gms.cloudmessaging.FINISHED_AFTER_HANDLED"
+141-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:38:17-92
+142                android:value="true" />
+142-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:39:17-37
+143        </receiver>
+144        <!--
+145             FirebaseMessagingService performs security checks at runtime,
+146             but set to not exported to explicitly avoid allowing another app to call it.
+147        -->
+148        <service
+148-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:46:9-53:19
+149            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+149-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:47:13-82
+150            android:directBootAware="true"
+150-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:48:13-43
+151            android:exported="false" >
+151-->[com.google.firebase:firebase-messaging:23.4.1] C:\Users\LENOVO\.gradle\caches\transforms-3\8d14159d870fb29bf894eb57778d72a4\transformed\jetified-firebase-messaging-23.4.1\AndroidManifest.xml:49:13-37
+152            <intent-filter android:priority="-500" >
+152-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:61:13-63:29
+153                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+153-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:62:17-78
+153-->C:\laragon\www\emi-locker\android\app\src\main\AndroidManifest.xml:62:25-75
+154            </intent-filter>
+155        </service>
+156
+157        <provider
+157-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO\.gradle\caches\transforms-3\0ac28fce5f7b60b3c54e9f3d424d84ee\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:23:9-28:39
+158            android:name="com.google.firebase.provider.FirebaseInitProvider"
+158-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO\.gradle\caches\transforms-3\0ac28fce5f7b60b3c54e9f3d424d84ee\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:24:13-77
+159            android:authorities="com.emilocker.dpc.firebaseinitprovider"
+159-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO\.gradle\caches\transforms-3\0ac28fce5f7b60b3c54e9f3d424d84ee\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:25:13-72
+160            android:directBootAware="true"
+160-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO\.gradle\caches\transforms-3\0ac28fce5f7b60b3c54e9f3d424d84ee\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:26:13-43
+161            android:exported="false"
+161-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO\.gradle\caches\transforms-3\0ac28fce5f7b60b3c54e9f3d424d84ee\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:27:13-37
+162            android:initOrder="100" />
+162-->[com.google.firebase:firebase-common:20.4.2] C:\Users\LENOVO\.gradle\caches\transforms-3\0ac28fce5f7b60b3c54e9f3d424d84ee\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:28:13-36
+163
+164        <activity
+164-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\LENOVO\.gradle\caches\transforms-3\c3ef6fff398798d091dad50dbdb2f9c2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+165            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+165-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\LENOVO\.gradle\caches\transforms-3\c3ef6fff398798d091dad50dbdb2f9c2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+166            android:exported="false"
+166-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\LENOVO\.gradle\caches\transforms-3\c3ef6fff398798d091dad50dbdb2f9c2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+167            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+167-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\LENOVO\.gradle\caches\transforms-3\c3ef6fff398798d091dad50dbdb2f9c2\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+168
+169        <meta-data
+169-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\LENOVO\.gradle\caches\transforms-3\159b81d51ab75cb2847d3e1749b411a3\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+170            android:name="com.google.android.gms.version"
+170-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\LENOVO\.gradle\caches\transforms-3\159b81d51ab75cb2847d3e1749b411a3\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+171            android:value="@integer/google_play_services_version" />
+171-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\LENOVO\.gradle\caches\transforms-3\159b81d51ab75cb2847d3e1749b411a3\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+172
+173        <receiver
+173-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+174            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+174-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+175            android:directBootAware="false"
+175-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+176            android:enabled="true"
+176-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+177            android:exported="true"
+177-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+178            android:permission="android.permission.DUMP" >
+178-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+179            <intent-filter>
+179-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+180                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+180-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+180-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+181            </intent-filter>
+182            <intent-filter>
+182-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+183                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+183-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+183-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+184            </intent-filter>
+185            <intent-filter>
+185-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+186                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+186-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+186-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+187            </intent-filter>
+188            <intent-filter>
+188-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+189                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+189-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+189-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\LENOVO\.gradle\caches\transforms-3\573f6a26013a5e6faa74fd7a6508f3e2\transformed\jetified-profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+190            </intent-filter>
+191        </receiver>
+192
+193        <service
+193-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\LENOVO\.gradle\caches\transforms-3\11c1c6434684cb9d4c5e3fc23df5d9ac\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:28:9-34:19
+194            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+194-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\LENOVO\.gradle\caches\transforms-3\11c1c6434684cb9d4c5e3fc23df5d9ac\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:29:13-103
+195            android:exported="false" >
+195-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\LENOVO\.gradle\caches\transforms-3\11c1c6434684cb9d4c5e3fc23df5d9ac\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:30:13-37
+196            <meta-data
+196-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\LENOVO\.gradle\caches\transforms-3\11c1c6434684cb9d4c5e3fc23df5d9ac\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:31:13-33:39
+197                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+197-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\LENOVO\.gradle\caches\transforms-3\11c1c6434684cb9d4c5e3fc23df5d9ac\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:32:17-94
+198                android:value="cct" />
+198-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\LENOVO\.gradle\caches\transforms-3\11c1c6434684cb9d4c5e3fc23df5d9ac\transformed\jetified-transport-backend-cct-3.1.8\AndroidManifest.xml:33:17-36
+199        </service>
+200        <service
+200-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\LENOVO\.gradle\caches\transforms-3\9a9d25ca0cbc976ff804564d5e8aa955\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:26:9-30:19
+201            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+201-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\LENOVO\.gradle\caches\transforms-3\9a9d25ca0cbc976ff804564d5e8aa955\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:27:13-117
+202            android:exported="false"
+202-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\LENOVO\.gradle\caches\transforms-3\9a9d25ca0cbc976ff804564d5e8aa955\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:28:13-37
+203            android:permission="android.permission.BIND_JOB_SERVICE" >
+203-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\LENOVO\.gradle\caches\transforms-3\9a9d25ca0cbc976ff804564d5e8aa955\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:29:13-69
+204        </service>
+205
+206        <receiver
+206-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\LENOVO\.gradle\caches\transforms-3\9a9d25ca0cbc976ff804564d5e8aa955\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:32:9-34:40
+207            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+207-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\LENOVO\.gradle\caches\transforms-3\9a9d25ca0cbc976ff804564d5e8aa955\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
+208            android:exported="false" />
+208-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\LENOVO\.gradle\caches\transforms-3\9a9d25ca0cbc976ff804564d5e8aa955\transformed\jetified-transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
+209    </application>
+210
+211</manifest>

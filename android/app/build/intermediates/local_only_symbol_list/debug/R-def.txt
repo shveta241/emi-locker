@@ -1,0 +1,20 @@
+R_DEF: Internal format may change without notice
+local
+id amountDueText
+id btnEmergency
+id btnPay
+id btnSubmitSetup
+id customerNameText
+id detailsCard
+id etImei
+id etServerUrl
+id qrFrame
+id qrHintText
+id qrImageView
+id setupLayout
+id subtitleText
+id titleText
+layout activity_lock
+string app_name
+string device_admin_description
+xml device_admin_policies
