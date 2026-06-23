@@ -216,12 +216,47 @@ class DashboardController extends Controller
             'status' => 'PENDING', // Will be re-evaluated as overdue
         ]);
         
-        // Add a future pending EMI
         EmiInstallment::create([
             'device_id' => $device2->id,
             'amount' => 1999.00,
             'due_date' => now()->addDays(26)->toDateString(),
             'status' => 'PENDING',
+        ]);
+    }
+
+    /**
+     * Generate Android Enterprise Provisioning payload dynamically.
+     */
+    public function getProvisioningData()
+    {
+        $apkPath = public_path('download/app.apk');
+        
+        if (!file_exists($apkPath)) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'APK file not found on server.'
+            ], 404);
+        }
+
+        // Calculate SHA-256 hash
+        $hash = hash_file('sha256', $apkPath, true);
+        
+        // Android requires URL-safe base64 encoding (no padding =, replace + with -, / with _)
+        $base64 = base64_encode($hash);
+        $urlSafeBase64 = str_replace(['+', '/', '='], ['-', '_', ''], $base64);
+
+        $downloadUrl = url('download/app.apk');
+
+        $provisioningJson = [
+            "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME" => "com.emilocker.dpc/com.emilocker.dpc.receiver.DeviceAdminReceiver",
+            "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION" => $downloadUrl,
+            "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_CHECKSUM" => $urlSafeBase64,
+            "android.app.extra.PROVISIONING_LEAVE_ALL_SYSTEM_APPS_ENABLED" => true
+        ];
+
+        return response()->json([
+            'status' => 'success',
+            'provisioning_data' => $provisioningJson
         ]);
     }
 }

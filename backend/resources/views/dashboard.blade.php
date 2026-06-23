@@ -95,7 +95,11 @@
             </div>
         </div>
         <div class="flex items-center space-x-4">
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <button onclick="openProvisioningModal()" class="px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 transition duration-200 text-xs font-semibold text-white shadow-lg shadow-indigo-600/20 flex items-center">
+                <svg class="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm14 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"></path></svg>
+                QR Provision
+            </button>
+            <span class="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
                 <span class="w-2 h-2 mr-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                 Backend Live
             </span>
@@ -334,6 +338,28 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+
+    <!-- QR Provisioning Modal -->
+    <div id="provisioning-modal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4">
+        <div class="glass max-w-sm w-full rounded-2xl p-6 shadow-2xl border border-indigo-500/30 text-center relative">
+            <button onclick="closeProvisioningModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            
+            <h4 class="text-md font-bold mb-2 text-white">Android Enterprise QR</h4>
+            <p class="text-xs text-gray-400 mb-6">Scan this on the "Hello" screen of a factory-reset device (Tap 6 times to open scanner).</p>
+            
+            <div id="qr-loading" class="text-sm text-indigo-400 animate-pulse mb-6">Generating secure payload...</div>
+            
+            <div class="flex justify-center bg-white p-3 rounded-xl mx-auto w-fit hidden" id="qr-container">
+                <img id="qr-image" src="" alt="Provisioning QR Code" class="w-48 h-48 pointer-events-none" />
+            </div>
+            
+            <div id="qr-error" class="text-xs text-rose-500 mt-4 hidden"></div>
         </div>
     </div>
 
@@ -795,25 +821,58 @@
             document.getElementById('installments-modal').classList.add('hidden');
         }
 
+        // Capture Ledger Payment mock
         function captureLedgerPayment(imei, amount) {
-            closeInstallmentsModal();
-            showToast("💸 Capturing UPI payment for installment...", "indigo");
-            
+            showToast("💸 Capturing installment payment...", "indigo");
             fetch('/api/payment/mock-trigger', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ imei, amount })
+                body: JSON.stringify({ imei: imei, amount: amount })
             })
             .then(res => res.json())
             .then(data => {
                 if (data.status === 'success') {
-                    showToast("🎉 EMI Installment paid successfully!", "emerald");
+                    showToast("🎉 Installment Paid! Device unlocked remotely.", "emerald");
+                    closeInstallmentsModal();
                     fetchData();
                 } else {
                     showToast("❌ Payment capture failed.", "rose");
                 }
             })
-            .catch(() => showToast("❌ Communication error.", "rose"));
+            .catch(() => showToast("❌ Server error during capture.", "rose"));
+        }
+
+        // QR Provisioning Modal functions
+        function openProvisioningModal() {
+            document.getElementById('provisioning-modal').classList.remove('hidden');
+            document.getElementById('qr-loading').classList.remove('hidden');
+            document.getElementById('qr-container').classList.add('hidden');
+            document.getElementById('qr-error').classList.add('hidden');
+
+            fetch('/api/dashboard/provisioning-qr')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('qr-loading').classList.add('hidden');
+                    if (data.status === 'success') {
+                        const jsonPayload = JSON.stringify(data.provisioning_data);
+                        const encodedUrl = encodeURIComponent(jsonPayload);
+                        document.getElementById('qr-image').src = `https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodedUrl}`;
+                        document.getElementById('qr-container').classList.remove('hidden');
+                    } else {
+                        document.getElementById('qr-error').innerText = data.message;
+                        document.getElementById('qr-error').classList.add('hidden');
+                        document.getElementById('qr-error').classList.remove('hidden');
+                    }
+                })
+                .catch(() => {
+                    document.getElementById('qr-loading').classList.add('hidden');
+                    document.getElementById('qr-error').innerText = "Failed to fetch provisioning payload.";
+                    document.getElementById('qr-error').classList.remove('hidden');
+                });
+        }
+
+        function closeProvisioningModal() {
+            document.getElementById('provisioning-modal').classList.add('hidden');
         }
 
         // Toast Messages Banner

@@ -22,6 +22,7 @@ Route::prefix('api')->group(function () {
     // Dashboard APIs
     Route::prefix('dashboard')->group(function () {
         Route::get('/data', [DashboardController::class, 'getDashboardData']);
+        Route::get('/provisioning-qr', [DashboardController::class, 'getProvisioningData']);
         Route::post('/device/register', [DashboardController::class, 'registerMockDevice']);
         Route::post('/device/{id}/lock', [DashboardController::class, 'lockDevice']);
         Route::post('/device/{id}/unlock', [DashboardController::class, 'unlockDevice']);

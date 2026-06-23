@@ -79,6 +79,9 @@ Google recently migrated to FCM v1 which requires OAuth2 bearer tokens. To avoid
 *   **Offline Lock Panel**: In case of lost internet connectivity, tapping the title of the lock screen 5 times prompts the user for a master manual bypass code (synced to the local preferences from the server).
 *   **24-Hour Offline Watchdog**: If a customer tries to bypass locking by going offline, the background alarm receiver `OfflineSyncReceiver.kt` locks the device automatically when offline for more than 24 hours.
 
+### 4. Advanced Android Enterprise QR Provisioning
+The dashboard now includes a built-in **"QR Provision"** feature. Instead of manually pushing the APK via USB/ADB, retailers can simply tap the "Hello" screen of a factory-reset Android device 6 times. The device's camera will open and scan the dynamically generated QR code from the dashboard, which contains the required URL-safe Base64 SHA-256 checksum and download link. The device will auto-download the APK over Wi-Fi and securely provision itself as the Device Owner automatically.
+
 ---
 
 ## Verification Results
