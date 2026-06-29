@@ -7,6 +7,15 @@ This guide contains the complete A-to-Z roadmap for hosting the EMI-Locker Larav
 2. Fill in your basic details. Ensure you choose your **Home Region** carefully (e.g., *Mumbai* or *Hyderabad*), as it cannot be changed later.
 3. **Card Verification:** Enter your Credit or Debit card details. Oracle will deduct a small amount (approx. ₹80 - ₹100) for identity verification, which will be **refunded instantly**. *You will never be billed unless you manually upgrade to a paid account.*
 
+> [!IMPORTANT]
+> **Dealing with Registration / Sign-up Rejections:**
+> Oracle's registration system (powered by Cybersource) is notoriously strict and frequently rejects legitimate sign-ups. If you get the *"Oops, we're sorry, an error occurred..."* message:
+> - **Use a Physical Credit Card:** Credit cards have a much higher success rate than Debit cards. Virtual cards, prepaid cards, and online-only bank cards (e.g., Paytm, Fi, Niyo) are almost always rejected.
+> - **Exact Address Match:** The name and billing address you enter **must match your credit card statement 100% exactly** (word for word, character for character).
+> - **Turn Off VPN/Adblock:** Use your normal home internet connection (or mobile data hotspot) with no VPN or proxy enabled.
+> - **Try Incognito Mode:** Use a private/incognito window to clear any session cookies.
+> - **Contact Live Chat Support:** Click the **"Contact Oracle customer service"** button or look for the Live Chat icon. Let them know your card was charged for verification but the account creation failed. Support can manually review and approve your registration.
+
 ## Step 2: Create Your "Always Free" Server (VM Instance)
 1. Once logged into the dashboard, navigate to **Compute > Instances** and click **"Create a VM instance"**.
 2. Give your instance a name (e.g., `emi-locker-backend`).
