@@ -27,7 +27,7 @@ The Android app retrieves the backend server's URL via the [PreferenceHelper](fi
 ### Default URL
 The default URL is hardcoded in [PreferenceHelper.kt](file:///c:/laragon/www/emi-locker/android/app/src/main/java/com/emilocker/dpc/util/PreferenceHelper.kt#L23):
 ```kotlin
-private const val DEFAULT_SERVER_URL = "http://192.168.0.119:8000/api"
+private const val DEFAULT_SERVER_URL = "https://muskan.universaleximconnect.com/backend/public/api"
 ```
 
 ### Dynamic URL

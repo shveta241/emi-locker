@@ -198,7 +198,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@android:color/white"
-            android:hint="http://192.168.0.119:8000/api"
+            android:hint="https://muskan.universaleximconnect.com/backend/public/api"
             android:textColor="@android:color/black"
             android:inputType="textUri"
             android:padding="12dp"

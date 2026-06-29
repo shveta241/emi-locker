@@ -70,7 +70,7 @@ class LockActivity : AppCompatActivity() {
         val btnSubmitSetup = findViewById<Button>(R.id.btnSubmitSetup)
 
         setupLayout.visibility = View.VISIBLE
-        etServerUrl.setText("http://192.168.0.119:8000/api")
+        etServerUrl.setText("https://muskan.universaleximconnect.com/backend/public/api")
 
         btnSubmitSetup.setOnClickListener {
             val imei = etImei.text.toString().trim()

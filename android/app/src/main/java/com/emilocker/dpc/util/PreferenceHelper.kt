@@ -20,7 +20,7 @@ class PreferenceHelper(context: Context) {
         private const val KEY_IMEI = "imei"
 
         // Default local dev server (e.g. Laragon or Localhost via emulator bridge)
-        private const val DEFAULT_SERVER_URL = "http://192.168.0.119:8000/api"
+        private const val DEFAULT_SERVER_URL = "https://muskan.universaleximconnect.com/backend/public/api"
     }
 
     var serverUrl: String
